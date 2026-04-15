@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Carousel ATM — How I Got 10,000 Followers and Paying Clients in 60 Days</title>
+<meta name="description" content="The exact system I used to grow to 10,000 Instagram followers and turn them into paying clients — in 60 days. No ads. No camera. No team.">
+<meta property="og:title" content="The Carousel ATM — How I Got 10,000 Followers and Paying Clients in 60 Days">
+<meta property="og:description" content="The exact system. Scripts, numbers, proof. $37.">
+<meta property="og:type" content="article">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+/* ============ RESET & BASE ============ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #1A1A1A;
+  background: #FAFAF8;
+  overflow-x: hidden;
+}
+img { max-width: 100%; height: auto; display: block; }
+
+/* ============ COLORS & TOKENS ============ */
+:root {
+  --cream: #FAFAF8;
+  --dark: #0D0D0D;
+  --ink: #1A1A1A;
+  --red: #D32B1E;
+  --red-soft: #FFF5F5;
+  --muted: #6B6B6B;
+  --border: #E8E8E5;
+  --container: 680px;
+}
+
+/* ============ TYPOGRAPHY ============ */
+h1, h2, h3, h4 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+}
+h1 {
+  font-size: clamp(38px, 8vw, 64px);
+  text-transform: uppercase;
+  font-weight: 900;
+}
+h2 {
+  font-size: clamp(30px, 5.5vw, 44px);
+  text-transform: uppercase;
+  margin: 60px 0 24px;
+  padding-top: 20px;
+  position: relative;
+}
+h2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: var(--red);
+}
+h3 {
+  font-size: clamp(22px, 3.5vw, 28px);
+  text-transform: uppercase;
+  margin: 40px 0 16px;
+  color: var(--ink);
+}
+p {
+  margin: 0 0 20px;
+  font-size: clamp(17px, 2.3vw, 19px);
+  line-height: 1.65;
+}
+p strong { color: var(--ink); font-weight: 700; }
+em { font-style: italic; color: var(--muted); }
+a { color: var(--red); text-decoration: none; }
+
+/* ============ LAYOUT ============ */
+.wrap {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.wrap-wide {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+section {
+  padding: 60px 0;
+}
+@media (min-width: 768px) {
+  section { padding: 80px 0; }
+}
+
+/* ============ HERO (DARK) ============ */
+.hero {
+  background: var(--dark);
+  color: var(--cream);
+  padding: 40px 0 60px;
+  position: relative;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .hero { padding: 60px 0 100px; }
+}
+.hero .kicker {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 24px;
+}
+.hero h1 {
+  color: var(--cream);
+  margin-bottom: 24px;
+}
+.hero h1 .accent { color: var(--red); }
+.hero h1 .accent-white { color: var(--cream); }
+.hero .sub {
+  font-size: clamp(16px, 2.3vw, 19px);
+  font-style: italic;
+  color: #B8B8B8;
+  margin-bottom: 40px;
+  max-width: 560px;
+  line-height: 1.5;
+}
+.hero .in-article {
+  border-top: 1px solid rgba(255,255,255,0.15);
+  padding-top: 32px;
+  margin-top: 40px;
+}
+.hero .in-article-label {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cream);
+  margin-bottom: 20px;
+}
+.hero ul {
+  list-style: none;
+  padding: 0;
+}
+.hero li {
+  padding: 14px 0 14px 32px;
+  position: relative;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #D5D5D5;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.hero li:last-child { border-bottom: none; }
+.hero li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 14px;
+  color: var(--red);
+  font-weight: 900;
+  font-size: 18px;
+}
+.hero .last-line {
+  margin-top: 40px;
+  padding: 24px;
+  background: rgba(211,43,30,0.08);
+  border-left: 3px solid var(--red);
+  font-size: 16px;
+  line-height: 1.5;
+  color: #E5E5E5;
+}
+
+/* ============ BODY SECTIONS (LIGHT) ============ */
+.section-body {
+  background: var(--cream);
+}
+.section-body p { color: var(--ink); }
+
+/* ============ HIGHLIGHT BOX ============ */
+.highlight {
+  background: var(--red-soft);
+  border-left: 4px solid var(--red);
+  padding: 24px 28px;
+  margin: 32px 0;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 1.55;
+}
+.highlight strong { color: var(--red); }
+
+/* ============ PULL QUOTE (DARK) ============ */
+.pullquote {
+  background: var(--dark);
+  color: var(--cream);
+  padding: 40px 32px;
+  margin: 48px -24px;
+  text-align: center;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: clamp(22px, 4vw, 32px);
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+}
+@media (min-width: 768px) {
+  .pullquote {
+    margin: 60px 0;
+    border-radius: 0;
+  }
+}
+
+/* ============ STATS ============ */
+.stats {
+  display: grid;
+  gap: 16px;
+  margin: 40px 0;
+}
+@media (min-width: 600px) {
+  .stats { grid-template-columns: 1fr 1fr 1fr; }
+}
+.stat {
+  background: white;
+  border: 1px solid var(--border);
+  padding: 28px 20px;
+  text-align: center;
+}
+.stat-number {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 48px;
+  font-weight: 900;
+  color: var(--red);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.stat-label {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ============ CAROUSEL RESULTS CARDS ============ */
+.carousels {
+  display: grid;
+  gap: 20px;
+  margin: 32px 0;
+}
+@media (min-width: 700px) {
+  .carousels { grid-template-columns: 1fr 1fr; }
+}
+.carousel-card {
+  background: white;
+  border: 1px solid var(--border);
+  padding: 28px;
+}
+.carousel-card h4 {
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-bottom: 16px;
+  font-family: 'DM Sans', sans-serif;
+}
+.carousel-card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+.carousel-card li {
+  padding: 6px 0;
+  font-size: 15px;
+  color: var(--ink);
+}
+.carousel-card .total {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 36px;
+  font-weight: 900;
+  color: var(--red);
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+/* ============ FRIEND CARD ============ */
+.friend-card {
+  background: var(--dark);
+  color: var(--cream);
+  padding: 36px 28px;
+  margin: 32px 0;
+}
+.friend-card ul {
+  list-style: none;
+  padding: 0;
+}
+.friend-card li {
+  padding: 10px 0;
+  font-size: 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.friend-card li:last-child { border-bottom: none; }
+.friend-card strong { color: var(--red); font-weight: 700; }
+
+/* ============ TWO FUTURES ============ */
+.futures {
+  display: grid;
+  gap: 24px;
+  margin: 32px 0;
+}
+@media (min-width: 800px) {
+  .futures { grid-template-columns: 1fr 1fr; }
+}
+.future {
+  padding: 32px 28px;
+  border: 1px solid var(--border);
+}
+.future-a {
+  background: #F2F2EF;
+  color: var(--muted);
+}
+.future-b {
+  background: var(--dark);
+  color: var(--cream);
+}
+.future h4 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  letter-spacing: -0.01em;
+}
+.future-a h4 { color: var(--ink); }
+.future-b h4 { color: var(--red); }
+.future p {
+  font-size: 15px;
+  line-height: 1.55;
+  margin-bottom: 14px;
+}
+.future-a p { color: var(--muted); }
+.future-b p { color: #D5D5D5; }
+.future strong { color: inherit; }
+.future-b strong { color: var(--cream); }
+
+/* ============ OFFER / WHAT'S INSIDE ============ */
+.offer-section {
+  background: var(--dark);
+  color: var(--cream);
+  padding: 80px 0;
+}
+.offer-section h2 {
+  color: var(--cream);
+}
+.offer-section h2::before { background: var(--red); }
+.offer-section p { color: #D5D5D5; }
+.offer-section strong { color: var(--cream); }
+.offer-list {
+  list-style: none;
+  padding: 0;
+  margin: 40px 0;
+}
+.offer-list li {
+  padding: 24px 0 24px 48px;
+  position: relative;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.offer-list li:last-child { border-bottom: none; }
+.offer-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 24px;
+  width: 32px;
+  height: 32px;
+  background: var(--red);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 16px;
+}
+.offer-list li strong {
+  display: block;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  color: var(--cream);
+  letter-spacing: -0.01em;
+}
+.offer-list li p {
+  font-size: 15px;
+  line-height: 1.55;
+  color: #B8B8B8;
+  margin: 0;
+}
+
+/* ============ PRICE BLOCK ============ */
+.price-block {
+  background: var(--cream);
+  text-align: center;
+  padding: 80px 24px;
+}
+.price-tag {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(80px, 16vw, 120px);
+  font-weight: 900;
+  color: var(--red);
+  line-height: 1;
+  margin: 20px 0;
+}
+.price-label {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+/* ============ CTA BUTTONS ============ */
+.cta-button {
+  display: inline-block;
+  background: var(--red);
+  color: white !important;
+  padding: 22px 48px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+  line-height: 1.1;
+  min-width: 280px;
+}
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(211,43,30,0.3);
+}
+.cta-button:active { transform: translateY(0); }
+
+.cta-wrapper {
+  text-align: center;
+  margin: 40px 0;
+}
+.cta-wrapper .guarantee-note {
+  display: block;
+  margin-top: 16px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* inline mid-article CTA */
+.inline-cta {
+  background: var(--red-soft);
+  border-top: 3px solid var(--red);
+  border-bottom: 3px solid var(--red);
+  padding: 40px 24px;
+  margin: 48px -24px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .inline-cta { margin: 60px 0; }
+}
+.inline-cta h4 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  color: var(--dark);
+}
+
+/* ============ "NOT FOR EVERYONE" ============ */
+.not-for-everyone ul {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0;
+}
+.not-for-everyone li {
+  padding: 16px 0 16px 36px;
+  position: relative;
+  border-bottom: 1px solid var(--border);
+  font-size: 17px;
+  line-height: 1.5;
+}
+.not-for-everyone li:last-child { border-bottom: none; }
+.not-for-everyone li.yes::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 16px;
+  color: var(--red);
+  font-weight: 900;
+  font-size: 20px;
+}
+.not-for-everyone li.no::before {
+  content: '✗';
+  position: absolute;
+  left: 0;
+  top: 16px;
+  color: var(--muted);
+  font-weight: 900;
+  font-size: 20px;
+}
+
+/* ============ FINAL SECTION ============ */
+.final-section {
+  background: var(--dark);
+  color: var(--cream);
+  padding: 100px 0 80px;
+  text-align: center;
+}
+.final-section h2 {
+  color: var(--cream);
+  font-size: clamp(36px, 7vw, 56px);
+  margin-bottom: 32px;
+  padding-top: 0;
+}
+.final-section h2::before { display: none; }
+.final-section p {
+  color: #D5D5D5;
+  font-size: 19px;
+  max-width: 580px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.final-section strong { color: var(--cream); }
+.final-section .command {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(26px, 5vw, 38px);
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1.2;
+  color: var(--cream);
+  margin: 40px 0;
+}
+
+/* ============ FOOTER ============ */
+footer {
+  background: var(--dark);
+  color: #888;
+  padding: 40px 24px;
+  text-align: center;
+  font-size: 14px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+footer em { color: #999; }
+
+/* ============ STICKY CTA BAR ============ */
+.sticky-cta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--dark);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  z-index: 1000;
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+}
+.sticky-cta.visible { transform: translateY(0); }
+.sticky-cta .sticky-info {
+  color: var(--cream);
+  font-size: 13px;
+  line-height: 1.3;
+  flex: 1;
+  min-width: 0;
+}
+.sticky-cta .sticky-info strong {
+  display: block;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+.sticky-cta .sticky-info .sticky-sub {
+  color: #999;
+  font-size: 12px;
+}
+.sticky-cta .cta-button {
+  padding: 12px 20px;
+  min-width: 0;
+  font-size: 15px;
+  white-space: nowrap;
+}
+@media (min-width: 600px) {
+  .sticky-cta { padding: 14px 24px; }
+  .sticky-cta .sticky-info strong { font-size: 22px; }
+  .sticky-cta .cta-button { padding: 14px 28px; font-size: 17px; }
+}
+
+/* ============ ANIMATIONS ============ */
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============ HELPERS ============ */
+.divider {
+  height: 1px;
+  background: var(--border);
+  margin: 48px auto;
+  max-width: 120px;
+}
+.mid-spacer { height: 40px; }
+.hook-example {
+  font-style: italic;
+  padding: 12px 0 12px 20px;
+  border-left: 3px solid var(--border);
+  margin: 8px 0;
+  color: var(--muted);
+}
+.hook-example.strong { border-left-color: var(--red); color: var(--ink); }
+
+/* Prevent sticky bar from hiding content */
+.bottom-spacer { height: 80px; }
+
+/* ============ KEYWORD LINK HELPER ============ */
+.emphasis { color: var(--red); font-weight: 700; }
+</style>
+</head>
+<body>
+
+<!-- ============================== HERO ============================== -->
+<header class="hero">
+  <div class="wrap">
+    <div class="kicker fade-up">Longread · By Kamil Gazizov</div>
+
+    <h1 class="fade-up">
+      How I got <span class="accent-white">10,000</span> Instagram followers <span class="accent">and turned them into paying clients</span> in <span class="accent">60 days</span>.
+    </h1>
+
+    <p class="sub fade-up">
+      No ads. No camera. No team. I'll show you the whole system. Not in theory — the actual mechanics, with scripts and numbers.
+    </p>
+
+    <div class="in-article fade-up">
+      <div class="in-article-label">In this article you'll learn:</div>
+      <ul>
+        <li>Why you can have 10,000 followers and zero sales. And what's actually broken between them</li>
+        <li>3 elements every carousel needs. Miss one and it's dead. Even if the content inside is gold</li>
+        <li>How an auto-funnel that sells while you sleep actually works. And the seven points where most people break it</li>
+        <li>Real numbers I've never published before: $259 from one post in 10 minutes, $370 from a narrow topic, 95,000 followers from 230 carousels</li>
+        <li>Why right now is the last moment this works on the English market before it gets as crowded as Russia</li>
+      </ul>
+      <div class="last-line">
+        Read to the end. At the bottom is the thing most Instagram "gurus" won't tell you. Because it kills their $997 courses.
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============================== SECTION: OPENER ============================== -->
+<section class="section-body">
+  <div class="wrap">
+    <h2 class="fade-up">Let's start with something strange.</h2>
+    <p class="fade-up">You're inside the system I'm about to describe. Right now. On yourself.</p>
+    <p class="fade-up">Not metaphorically. Literally.</p>
+    <p class="fade-up">Let me reconstruct your last five minutes. You were scrolling Instagram or TikTok. Out of hundreds of posts in your feed, one (my carousel or Reel) stopped your finger. You don't know me. You don't follow me. The algorithm showed me to you for the first time. But something in the first slide or the first second caught you. You started reading.</p>
+    <p class="fade-up">You got to the last slide. It said: <em>"Comment [keyword] and I'll send you this guide."</em> You typed the word in the comments. Maybe because you were curious. Maybe because it was easier than closing and finding something else. A few seconds later, an automated message landed in your DMs. A link. You clicked. This page opened. And now you're reading it.</p>
+    <p class="fade-up">Check for yourself. Open the comment you left under the post. Open the message in your DMs. Open the link you came through. All three elements are there. Carousel → comment → auto-reply → longread.</p>
+    <p class="fade-up">This isn't a coincidence. This isn't "I got lucky with that post." This is the algorithm. I do this every day. Thousands of people go through this funnel the same way you just did.</p>
+    <p class="fade-up">And here's the most important part. I didn't spend a single dollar to get you here. Not a cent on Facebook Ads. Not a penny on Google. No targeting. No agency. No team.</p>
+    <p class="fade-up">One post. One automated message. One page of text. And you. Someone I've never seen in my life. You're reading what I wrote. With the intent to buy.</p>
+    <div class="highlight fade-up">
+      <strong>This is the system.</strong> You just walked through it from start to finish. Now I'm going to take it apart and teach you how to build your own.
+    </div>
+  </div>
+</section>
+
+<!-- ============================== SECTION: RECOGNIZE YOURSELF ============================== -->
+<section class="section-body">
+  <div class="wrap">
+    <h2 class="fade-up">Recognize yourself. One of these scenarios is you.</h2>
+
+    <h3 class="fade-up">Scenario 1. You're making Reels.</h3>
+    <p class="fade-up">You watched the breakdowns. You know about hooks. You wrote a script. An hour. Shot a few takes. You think it turned out decent. Edited in CapCut. Another three hours. Added captions, retimed the rhythm, picked a thumbnail. Hit publish.</p>
+    <p class="fade-up">Check back in an hour: 47 views. Six hours later: 184. Twenty-four hours later: 211. Three likes. One from your mom. One from a friend. One from a random account with a dog as the profile picture.</p>
+    <p class="fade-up">You don't want to shoot the next Reel. But you force yourself because "you have to stay consistent." You shoot again. Same result. By the third one, you realize you hate your voice on recording and your nervous glance into the lens. You close the app. Open it again a week later. Nothing changed.</p>
+
+    <h3 class="fade-up">Scenario 2. You already have an audience.</h3>
+    <p class="fade-up">5,000 followers. 12,000. Maybe even 30,000 if you've been at this a while. People like your posts. Comment "fire 🔥". DM you "love your content!"</p>
+    <p class="fade-up">And at the end of the month you look at Stripe or your bank account. Zero from Instagram. All your clients came through referrals, through your network, through UpWork, through old word of mouth. Not through the content you pour 15 hours a week into.</p>
+    <p class="fade-up">You tell yourself: "I just need more followers." 10,000 is the magic number. Everyone talks about 10K. You grind. You hit 10,000. Sales don't come. You tell yourself: "So I need 30K." You hit 30K (if you have the stamina). Sales are the same. Zero, or the few that would've come without Instagram anyway.</p>
+    <p class="fade-up">And then a scary thought starts creeping in: maybe followers and money are two different things. Maybe I spent two years on something that looked like a path but wasn't one.</p>
+
+    <h3 class="fade-up">Scenario 3. You sit down to write a post.</h3>
+    <p class="fade-up">Open notes. Blank page. You stare at the screen for 15 minutes. Cycling through what to write about. Everything that comes to mind feels tired. "Everyone's already said this." "This isn't my expertise." "This won't land with my audience."</p>
+    <p class="fade-up">Ideas lasted you the first week when you started. Then you burned through them all. Now you sit and Google "content ideas for Instagram 2026", get the same list of ten points for the sixth time, and close the laptop.</p>
+
+    <div class="divider"></div>
+
+    <p class="fade-up">If you recognized yourself, it's not because you're stupid. Not because you're lazy. Not because your niche is wrong.</p>
+    <p class="fade-up">It's because the rules of the game changed and nobody told you. <strong>You're playing chess while everyone around you is playing poker.</strong></p>
+  </div>
+</section>
+
+<!-- ============================== SECTION: NOT YOUR FAULT ============================== -->
+<section class="section-body">
+  <div class="wrap">
+    <h2 class="fade-up">This isn't your fault. Seriously.</h2>
+    <p class="fade-up">I'm not repeating this to comfort you. I'm repeating it because it's a fact. And without understanding this fact, you can't rebuild.</p>
+    <p class="fade-up">You were trying to fit into a game that wasn't designed for you.</p>
+    <p class="fade-up">Here's what "Instagram success" looks like from the outside: someone posts a polished Reel, it hits 500,000 views, they get clients. You watch this and think: "so I need to shoot polished Reels too."</p>
+    <p class="fade-up">Here's what it actually looks like from the inside. That person has:</p>
+    <div class="highlight fade-up">
+      <strong>A production team</strong> — camera operator, editor, scriptwriter<br><br>
+      <strong>A content budget</strong> — $5,000–$10,000 per month<br><br>
+      <strong>A studio</strong> — physical space, equipment, lighting<br><br>
+      <strong>An idea pipeline from the team</strong> — they don't hunt for topics themselves<br><br>
+      <strong>A base of 500 prior attempts</strong> — they already know what works and what doesn't
+    </div>
+    <p class="fade-up">You see the result. You don't see the infrastructure.</p>
+    <p class="fade-up">You have an iPhone, motivation, and 40 minutes a day after your main job. You make <strong>one</strong> Reel, hoping it'll hit. The person with the infrastructure makes <strong>a hundred</strong>, knowing ten of them will.</p>
+    <p class="fade-up"><strong>This isn't about talent. It's about math of attempts.</strong></p>
+    <p class="fade-up">Every time you posted with the hope "this one's going to explode," you walked into the casino with one chip. They walk in with a hundred. You didn't lose. You just didn't understand the rules.</p>
+
+    <div class="pullquote fade-up">And here's what nobody told you. There's another game.</div>
+
+    <p class="fade-up">In this other game, you don't need a team. Don't need a studio. Don't need a camera. Don't need to be on camera at all. You can run ten attempts a day by yourself. Because each attempt costs you 10 minutes, not 4 hours.</p>
+    <p class="fade-up">The game is called "the content factory." It became possible this past year, when AI got good enough to write in your voice. Most of the people growing audiences on the English market from zero right now are playing it.</p>
+    <p class="fade-up">Nobody showed you it existed.</p>
+  </div>
+</section>
+
+<!-- ============================== SECTION: MY STORY ============================== -->
+<section class="section-body">
+  <div class="wrap">
+    <h2 class="fade-up">My story. Unfiltered.</h2>
+    <p class="fade-up">My name is Kamil. I've been in marketing for 10+ years. Started when I was 13.</p>
+    <p class="fade-up">I'm telling you this story not to impress you. I'm telling you because it explains why I know what I know. And why I'm not selling you theory I bought from another guru.</p>
+
+    <h3 class="fade-up">February 2022. I'm 19. Just got married.</h3>
+    <p class="fade-up">We moved into a new apartment. The wedding, the move, the new life. All at once. Money was going fast, but it was fine: my team was generating $1,000 to $3,000 a day on Facebook Ads and Google Ads. I ran digital products for the Russian-speaking market. Russia, Kazakhstan, Uzbekistan, Kyrgyzstan, Belarus.</p>
+    <p class="fade-up">There was a Mercedes-Benz dealership five minutes from the office. I used to walk in from time to time. Not to buy. To sit. I'd get into one of the new sedans, put my hands on the wheel, stare ahead. The sales guys already knew me by face. They stopped approaching.</p>
+    <p class="fade-up">I wasn't buying yet. But I knew it was close. We were pushing toward our first $50,000 clean month. The Mercedes was a promise I made to myself: hit that number, you buy it. Not a flex. A symbol. <em>You got here. This works. Welcome to the next level.</em></p>
+
+    <h3 class="fade-up">February 24, 2022. One day. It all ended.</h3>
+    <p class="fade-up">Facebook Ads locked. Google Ads locked. In one morning. One move.</p>
+    <p class="fade-up">These were my only traffic channels. We hadn't diversified. Why, when it was working? We hadn't built organic. Why spend resources on something slow when paid was printing?</p>
+    <p class="fade-up">By lunchtime that day, revenue hit zero. Not negative. Just stopped. The Russian ad platforms (VK Ads, Yandex Direct) I tried over the next two weeks. Ten times less volume. Worse audience quality. A completely different economy.</p>
+    <p class="fade-up">I remember the evening I sat in the kitchen of that new apartment we'd just moved into, staring at my financial model. The Mercedes crossed out. I ran through it in my head. Team. Rent. Taxes. How many months we'd last.</p>
+    <p class="fade-up">My reaction wasn't heroic. It was tired. I sat there thinking one thought. <em>Okay. Organic then. Starting from scratch. Learning something I don't know how to do.</em></p>
+
+    <h3 class="fade-up">The next three years.</h3>
+    <p class="fade-up">I won't romanticize it. They were hard. I built the system from zero. Content, funnels, organic traffic, multiple platforms in parallel. So no single point of failure could shut me off in one day again.</p>
+    <p class="fade-up">And I built it. Over the following years. <strong>Over a million dollars in digital product sales. Zero ad spend.</strong> In a market that got harder every single year. Falling purchasing power. Rising competition. A shrinking economy.</p>
+    <p class="fade-up">We grew more than ten accounts past 10,000 followers, several past 100,000. Ran dozens of automated funnels. Did hundreds of product launches.</p>
+
+    <h3 class="fade-up">And here's what matters now.</h3>
+    <p class="fade-up">That same system is moving to the English market. And here's what I've learned over the last six months watching it work on English-speaking audiences.</p>
+    <p class="fade-up">Purchasing power here is <strong>dramatically higher</strong>. $37 on the English market is a trivial amount. Decisions at this price point happen fast. On the Russian market, the same $37 was a real barrier that had to be overcome with a much harder-working funnel.</p>
+    <p class="fade-up">Organic competition here is <strong>lower</strong>, not higher. Most Western marketers still live on paid traffic. Meta Ads, YouTube Ads, Google Ads. They didn't build organic infrastructure because they didn't have to. They didn't have their February 24th.</p>
+    <p class="fade-up">AI tools (Claude, ChatGPT, design generation, content automation) are the same everywhere. But almost nobody uses them to their potential.</p>
+
+    <div class="pullquote fade-up">A system forged in a crisis market is walking into a greenhouse.</div>
+
+    <p class="fade-up">If it worked there, it works faster here. And you have a window. Before the rest of the market wakes up.</p>
+  </div>
+</section>
+
+<!-- ============================== SECTION: BREAKTHROUGH ============================== -->
+<section class="section-body">
+  <div class="wrap">
+    <h2 class="fade-up">The moment I realized it was repeatable.</h2>
+    <p class="fade-up">It was sometime in 2023. I'd been building the organic system for a year. It was producing results. Followers came. Sales came. But they were individual events. There was no <em>repeatability</em>.</p>
+    <p class="fade-up">I posted a carousel on a Wednesday evening. The topic was narrow. A specific tactic for a specific niche. I didn't even have high hopes: I figured 5–10K views, standard for tight content.</p>
+    <p class="fade-up">I went to sleep. On Thursday mornings I usually check the first 12-hour metrics. That's the peak of distribution.</p>
+    <p class="fade-up">Open Instagram. Look at the numbers.</p>
+
+    <div class="stats fade-up" style="grid-template-columns: 1fr; max-width: 400px; margin-left:auto; margin-right:auto;">
+      <div class="stat">
+        <div class="stat-number">150,000</div>
+        <div class="stat-label">Views overnight</div>
+      </div>
+    </div>
+
+    <p class="fade-up">I looked again. Not a typo. 150 thousand.</p>
+    <p class="fade-up">But that wasn't the important part. The important part. The comments. When I set up that post, I'd added a keyword for the auto-reply in DMs. At that point my funnel was just keyword → link to the product page at $37.</p>
+    <p class="fade-up">I opened ChatPlace, the service that handles the auto-replies. Looked at how many triggers fired overnight.</p>
+    <p class="fade-up"><strong>Several hundred.</strong> All those people got the link. Some clicked. Some of those who clicked bought.</p>
+    <p class="fade-up">I open Stripe. I see notifications of payments that came in while I slept.</p>
+
+    <div class="highlight fade-up">
+      <strong>$259. Seven sales at $37 in one night.</strong> From one post. Which I'd written in 40 minutes, assembled in Canva in 20, and published without overthinking.
+    </div>
+
+    <p class="fade-up">I sat there staring at the screen for about thirty seconds. One word in my head. <em>Repeatable.</em></p>
+    <p class="fade-up">Because $259 isn't the important number. The important number is <strong>one publication</strong>. One act. Not a story. Not a fluke. A system that produced a measurable result from a measurable input in a measurable time.</p>
+    <p class="fade-up">That same day I sat down and started writing. What worked. What the hook was. What the structure was. What the keyword was. What the first DM said. How the page the link pointed to was built.</p>
+    <p class="fade-up">For the next six months I repeated it. Changing topics, formats, niches. Watching what stayed constant. What changed. What broke.</p>
+    <p class="fade-up">This article is the result. The guide I'm selling at the end is the full documentation.</p>
+  </div>
+</section>
+
+<!-- ============================== SECTION: THREE ELEMENTS ============================== -->
+<section class="section-body">
+  <div class="wrap">
+    <h2 class="fade-up">The three elements of the system.</h2>
+    <p class="fade-up">Now the core. Three components without which a carousel on Instagram or TikTok doesn't work. Not "works worse." <strong>Doesn't work at all.</strong> You can have killer content inside. You can be a genius in your niche. If even one of the three elements is broken, the post goes to zero.</p>
+
+    <h3 class="fade-up">Element 1. The hook.</h3>
+    <p class="fade-up">You have less than one second. The first slide of a carousel or the first second of a Reel has to stop the scroll. If it doesn't, the algorithm sees people didn't stay, and stops showing the post. Everything else inside is irrelevant. Nobody will see it.</p>
+    <p class="fade-up">Here's a concrete breakdown. Weak hooks that don't work:</p>
+
+    <div class="fade-up">
+      <div class="hook-example">"How to grow on Instagram"</div>
+      <div class="hook-example">"5 tips for your business"</div>
+      <div class="hook-example">"Why personal branding matters"</div>
+      <div class="hook-example">"Want more sales?"</div>
+      <div class="hook-example">"Sharing my experience"</div>
+    </div>
+
+    <p class="fade-up">Why they don't work: they promise nothing specific. No number. No pain. No result. I've seen "tips" a thousand times. "Personal branding matters" — thanks, I know. My finger doesn't stop.</p>
+    <p class="fade-up">Strong hooks that work:</p>
+
+    <div class="fade-up">
+      <div class="hook-example strong">"I posted 230 carousels. Got 95,000 followers. Here's what worked."</div>
+      <div class="hook-example strong">"This carousel made me $259. It took 10 minutes."</div>
+      <div class="hook-example strong">"Why you have 3,000 followers and $0 in sales — and how to fix it in 7 days."</div>
+      <div class="hook-example strong">"I spent $10,000 on ads and barely broke even. Then I started doing this."</div>
+      <div class="hook-example strong">"Nobody's telling you the truth about Instagram. Here it is."</div>
+    </div>
+
+    <p class="fade-up">What do the strong ones share? <strong>Specificity. A number. Or a pain the reader lives in right now. Or a result they want.</strong></p>
+    <p class="fade-up">I had a live example. I was running a carousel about positioning for freelancers. First version of the hook: <em>"How to position yourself as a freelancer."</em> Published. 800 views in two days. Dead post.</p>
+    <p class="fade-up">Rewrote the hook: <em>"Why your freelance rates are too low — and the 3-word fix I used to 3x mine."</em> One number. One promised result. One specific thing. Same content inside. Same design. Same day of the week.</p>
+
+    <div class="highlight fade-up">
+      <strong>67,000 views in a week.</strong> Same content. The difference was one slide.
+    </div>
+
+    <h3 class="fade-up">Element 2. Structure.</h3>
+    <p class="fade-up">The hook worked. The person stopped. Now you have to hold them to the end. Or the CTA at the end will never be seen, and the funnel never starts.</p>
+    <p class="fade-up">The one rule of structure that never changes: <strong>every slide has to end in a way that makes them want to see the next one</strong>. Like a show that ends every episode on a cliffhanger.</p>
+    <p class="fade-up">The shapes can be anything:</p>
+    <div class="highlight fade-up">
+      <strong>Problem → Agitation → Solution → Steps</strong> (classic, if you have a sharp pain and a sharp solution)<br><br>
+      <strong>List of surprising facts</strong> (if the topic supports 5–7 bright hits)<br><br>
+      <strong>Story arc</strong> (if there's drama: setup, conflict, turn, resolution)<br><br>
+      <strong>Myth vs Reality</strong> (if your niche has a lot of false beliefs you can destroy)<br><br>
+      <strong>Before / After / Bridge</strong> (if you have a transformation to show)
+    </div>
+    <p class="fade-up">Here's a concrete example of how the same topic changes in power based on structure. Topic: "why most freelancers don't grow their income."</p>
+    <p class="fade-up"><strong>Bad structure:</strong> 8 slides, each starting with "Reason 1…", "Reason 2…". All slides equal. No climax. No reason to scroll to slide 6. You can see slides 1-2 and understand the pattern. People drop off at slide 3.</p>
+    <p class="fade-up"><strong>Good structure:</strong> Slide 1. Hook. Slide 2. "Three main reasons, and the last one will kill you." Slides 3, 4. The reasons everyone already knows. Slide 5. "But the real reason is different." Slide 6. The reveal. Slide 7. What to do about it. Slide 8. CTA.</p>
+    <p class="fade-up">Same content. But the structure forces the scroll to the end.</p>
+
+    <h3 class="fade-up">Element 3. The CTA that launches the funnel.</h3>
+    <p class="fade-up">Without this, everything before it is wasted.</p>
+    <p class="fade-up">The CTA formula for the last slide of the carousel (or the end of a Reel caption):</p>
+    <div class="highlight fade-up">
+      <strong>"Comment [KEYWORD] and I'll send you [SOMETHING VALUABLE]"</strong>
+    </div>
+    <p class="fade-up">Example: "Comment 'SYSTEM' and I'll send you the full breakdown of this carousel funnel."</p>
+    <p class="fade-up">What happens when someone comments. Two effects fire at the same time.</p>
+    <p class="fade-up"><strong>Effect 1. Algorithm.</strong> Comments on Instagram and TikTok are a high-engagement signal. The algorithm reads them as: "this post is making people act." It starts pushing the post wider. To new people. Not just your existing followers. Reach grows exponentially. Snowball: more comments → algorithm shows wider → more comments.</p>
+    <p class="fade-up"><strong>Effect 2. Funnel.</strong> The automation service (ChatPlace, ManyChat) sees the comment with the keyword. It automatically sends the user a pre-built DM. The DM has a link. The link leads to your offer page (product, longread with a product at the end, VSL, whatever).</p>
+    <p class="fade-up">The person enters your funnel. Without you. Automatically. Ten of them or ten thousand.</p>
+    <p class="fade-up">Sounds simple. In practice, between "person commented a keyword" and "money hit your account" there are <strong>seven technical joints, and four scenarios where it all breaks</strong>:</p>
+    <div class="highlight fade-up">
+      1. What the auto-reply message should say<br>
+      2. How to set up the keyword trigger so it doesn't fire on garbage<br>
+      3. What page to send them to — product directly, or a bridging longread<br>
+      4. What the length and structure of the bridging longread should be<br>
+      5. Where to place the CTA in the longread — one point or several<br>
+      6. What to do if they clicked but didn't buy — the follow-up sequence<br>
+      7. How to measure conversion at each stage
+    </div>
+    <p class="fade-up">Every one of these is a point where most people leak traffic. Not because the traffic was bad. Because the funnel was set up on "let's hope."</p>
+    <p class="fade-up">All of this is covered in the guide with the scripts I've tested for two years and rewritten dozens of times. More on that below.</p>
+  </div>
+</section>
+
+<!-- ============================== SECTION: NUMBERS ============================== -->
+<section class="section-body">
+  <div class="wrap">
+    <h2 class="fade-up">Numbers that speak for themselves.</h2>
+    <p class="fade-up">Theory is nice. But you're reading this because you want to know if it actually works. Here are the real numbers from my actual posts. Not made up. Not rounded.</p>
+
+    <div class="carousels fade-up">
+      <div class="carousel-card">
+        <h4>Carousel #1 · Broad topic</h4>
+        <ul>
+          <li>150,000 views</li>
+          <li>500 new followers</li>
+          <li>7 sales at $37</li>
+        </ul>
+        <div class="total">$259</div>
+      </div>
+      <div class="carousel-card">
+        <h4>Carousel #2 · Narrow topic</h4>
+        <ul>
+          <li>10,000 views</li>
+          <li>300 new followers</li>
+          <li>10 sales at $37</li>
+        </ul>
+        <div class="total">$370</div>
+      </div>
+    </div>
+
+    <p class="fade-up">Now the interesting part. The second carousel got <strong>15 times fewer views</strong>. And brought in <strong>10 times more money relative to traffic</strong>.</p>
+    <p class="fade-up">Why?</p>
+    <p class="fade-up">A broad topic. For example, "how to grow on Instagram." It pulls everyone. 150,000 views looks pretty in the stats. But when you break down that audience: 40% are teenagers who want to be influencers and don't have money. 25% are moms for whom $37 isn't a priority. 15% are people who just look for free advice on principle. 10% are competitors watching what you do. 7% are random passersby. That leaves 3% real target audience. 4,500 people. Out of them, 7 buy.</p>
+    <p class="fade-up">A narrow topic. For example, "how a fitness coach can get to $10K/month through Instagram." It pulls only your people. 10,000 views, but 60% of them are fitness coaches looking for clients. 6,000 people in your exact target audience. Out of them, 10 buy.</p>
+    <div class="highlight fade-up">
+      <strong>Broad topic. Problem at the top of the funnel. Narrow topic. Problem at the bottom of the funnel.</strong> The second one is always more profitable.
+    </div>
+    <p class="fade-up">And this isn't some unique thing about me. It's mechanics. A friend of mine works on the exact same system. In the health and weight loss niche, on the English market.</p>
+    <p class="fade-up">He launched from zero. Posted using the same system.</p>
+
+    <div class="friend-card fade-up">
+      <ul>
+        <li><strong>230 carousels</strong> in 4 months</li>
+        <li><strong>95,000 followers</strong> from zero</li>
+        <li>Product price point: <strong>$11</strong></li>
+        <li><strong>Dozens</strong> of sales per day</li>
+        <li>Steady income: <strong>$200–300 per day</strong></li>
+      </ul>
+    </div>
+
+    <p class="fade-up">But the main thing isn't even the numbers. The main thing is that he has <strong>one assistant who does everything for him</strong>. Every day. Carousels, publishing, DM replies. Everything automated or delegated. <strong>He doesn't work on it at all anymore.</strong> $200–300 a day is enough for him. He doesn't want more.</p>
+    <p class="fade-up">Think about that for a second. One person launched the system. Hired one assistant. The system runs without him. Money comes in every day. He lives his life.</p>
+    <p class="fade-up">This isn't blogging. This isn't "personal branding." This is a business machine one person can launch, dial in, and put on autopilot in a few months.</p>
+    <p class="fade-up"><strong>And all of it on organic. On a system most Western marketers haven't started using yet.</strong></p>
+  </div>
+</section>
+
+<!-- ============================== SECTION: WHY NOW ============================== -->
+<section class="section-body">
+  <div class="wrap">
+    <h2 class="fade-up">Why right now. And why this window closes.</h2>
+    <p class="fade-up">The English-speaking Instagram market today is in the state the Russian-speaking market was in five years ago.</p>
+    <p class="fade-up">On the Russian market in 2019–2020, any decent carousel pulled in thousands of followers. Almost no competition. The algorithms generously pushed new accounts. The people who got in in 2019 are sitting on 500K+ followers today and don't worry about the future.</p>
+    <p class="fade-up">In 2025–2026 on the Russian market, the same tactics produce ten times less. Why? Market's saturated. Everyone knows about hooks. Everyone knows about CTAs. Everyone makes carousels. Competition for attention has multiplied. The window closed.</p>
+    <p class="fade-up">The English-speaking market right now is in early 2020. The average US marketer still relies on paid traffic. Organic infrastructure is being built by a handful. AI tools are available to everyone, but used to capacity by almost nobody. The Instagram and TikTok algorithm in the English segment is still generous to new accounts.</p>
+    <p class="fade-up">But this won't last. The market moves fast. People see what's working for others, copy, catch up. Competition rises exponentially.</p>
+
+    <div class="pullquote fade-up">My estimate: a 12–18 month window. Then it closes.</div>
+
+    <p class="fade-up">After that, the English market will be as saturated as the Russian one today. Same tactics will produce 5–10x less.</p>
+    <p class="fade-up">The people who get in now will be the same category that, in two years, sits on 100K+ followers with a solid client base. The people who wait will be catching up.</p>
+    <p class="fade-up">This isn't marketing urgency. This is an observable trend across two markets in sequence.</p>
+  </div>
+</section>
+
+<!-- ============================== SECTION: TWO FUTURES ============================== -->
+<section class="section-body">
+  <div class="wrap-wide">
+    <div class="wrap" style="padding:0;">
+      <h2 class="fade-up">Two futures. Choose.</h2>
+      <p class="fade-up">Let me paint you two pictures. Both 90 days from today.</p>
+    </div>
+
+    <div class="futures fade-up">
+      <div class="future future-a">
+        <h4>Picture A. You change nothing.</h4>
+        <p><strong data-date-plus="90">{TODAY+90}</strong>, 11 PM. You're in bed with your phone. Opening Instagram for the tenth time today. Scrolling through other people's accounts.</p>
+        <p>You see a post from a marketer who was at your level three months ago. He now has 12K followers. He launched a course. 300 comments underneath.</p>
+        <p>You open your own account. 847 followers. Last post a week ago. 23 likes. One comment from a bot.</p>
+        <p>You think again: "I need to start posting seriously." You set a reminder for tomorrow. Tomorrow will be the same.</p>
+        <p>Another three months pass. Another six. Nothing changes. You convince yourself Instagram "isn't your format." LinkedIn is better for you. Or email newsletters. Or Twitter. You don't do those either.</p>
+      </div>
+
+      <div class="future future-b">
+        <h4>Picture B. You launched the system.</h4>
+        <p><strong data-date-plus="90">{TODAY+90}</strong>, 7 AM. You wake up. The first thing you do. Open the ChatPlace dashboard.</p>
+        <p><strong>47 triggers fired overnight.</strong> 47 people commented your keyword under yesterday's carousel. All of them got the auto-reply. All of them got the link.</p>
+        <p>Open Stripe. <strong>5 new payments.</strong> Total: $247. While you were sleeping.</p>
+        <p>Open Instagram. Yesterday's carousel pulled another 8,000 views overnight. 34 new comments this morning. Triggers are still firing right now.</p>
+        <p>You make coffee. Sit down at the computer. Open Craft AI. The service suggests relevant topics for your niche, generates a full carousel: hook, structure, design. You approve, tweak a couple of things, hit publish. 15–30 minutes. A new carousel is live.</p>
+        <p>Today the triggers will fire again. There will be sales. You did nothing except 25 minutes of work this morning.</p>
+        <p>By the end of the month you have 6,000 new followers. Monthly Instagram revenue: $4,200. You start thinking whether to hire an assistant for the routine.</p>
+        <p>Three months ago you were in bed with 847 followers.</p>
+      </div>
+    </div>
+
+    <div class="wrap" style="padding:0;">
+      <p class="fade-up" style="text-align:center; margin-top:40px; font-size:20px;">The difference between Picture A and Picture B. <strong>One decision made today.</strong></p>
+      <p class="fade-up" style="text-align:center;">Not in a month. Not "when I have time." Not "starting Monday." Today.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== SECTION: IDENTITY SHIFT ============================== -->
+<section class="section-body">
+  <div class="wrap">
+    <h2 class="fade-up">You're not a content creator anymore.</h2>
+    <p class="fade-up">Here's what you need to get before you go further.</p>
+    <p class="fade-up">If you think of yourself as an "Instagram blogger" or "content creator," you've already lost. That identity puts you in the position of a craftsman who makes every unit of content by hand, whose time is linearly tied to output.</p>
+
+    <div class="pullquote fade-up">You're the operator of a system that runs 24/7. Content is the fuel. The funnel is the engine. AI is the amplifier. You're the engineer.</div>
+
+    <p class="fade-up">Your job isn't to make one brilliant post. Your job is to launch and tune a machine that makes 30 decent posts a month, of which 3 will hit, and 2 of those 3 will bring in clients.</p>
+    <p class="fade-up">Different level of thinking. Different role. Different result.</p>
+  </div>
+</section>
+
+<!-- =============== PRODUCT INTRODUCED — STICKY STARTS =============== -->
+<div id="product-anchor"></div>
+
+<!-- ============================== SECTION: OFFER ============================== -->
+<section class="offer-section">
+  <div class="wrap">
+    <h2 class="fade-up">What's inside the guide.</h2>
+    <p class="fade-up">I documented the whole system step by step. What took me 10 years, a million dollars in revenue, and February 24th, 2022. You get it in one evening of reading.</p>
+    <p class="fade-up" style="font-size: 20px; margin-bottom: 20px;"><strong>The full blueprint:</strong></p>
+
+    <ul class="offer-list fade-up">
+      <li>
+        <strong>The exact carousel formula</strong>
+        <p>Hook, structure, CTA. With swipe files of 30+ tested hook templates I use myself. A copywriter who writes these charges $200 each. You get 30.</p>
+      </li>
+      <li>
+        <strong>The ChatPlace/ManyChat funnel blueprint</strong>
+        <p>Step by step auto-reply setup. The seven technical points I mentioned above. All of them covered. Screenshots, copy, exact buttons to press. One evening of work. Funnel live.</p>
+      </li>
+      <li>
+        <strong>The ready DM script</strong>
+        <p>Word-for-word copy of the first DM I send myself. I rewrote it 14 times over two years. The latest version converts 34% higher than the first. Adapt to your niche. Done.</p>
+      </li>
+      <li>
+        <strong>The longread template</strong>
+        <p>The 10-block structure this article you're reading right now is built on. You just experienced firsthand that it works. Inside the guide is the skeleton. You fill in your story and your product.</p>
+      </li>
+      <li>
+        <strong>The content factory method</strong>
+        <p>How to go from 1 carousel a week to 10 a day without burning out. This section kills the idea that "you need more time." You need less time. But a different process.</p>
+      </li>
+      <li>
+        <strong>AI prompts in your voice</strong>
+        <p>Claude + Craft AI workflow. The specific prompts I use. AI that writes like you. Not like AI. That's the difference between a post people read and a post people scroll past.</p>
+      </li>
+      <li>
+        <strong>Real case studies with exact numbers</strong>
+        <p>$259, $370, 95K followers. With the actual posts that did it. You'll see them. Not "similar ones." The actual ones.</p>
+      </li>
+      <li>
+        <strong>The niche selector</strong>
+        <p>How to pick a topic that earns. Not a topic that gets views. This section would've saved me two years of my life if I'd had it in 2020.</p>
+      </li>
+    </ul>
+
+    <p class="fade-up"><strong>One more thing.</strong></p>
+    <p class="fade-up">This system has two halves. First. Growing to 10,000 followers. Second. Turning those followers into paying clients.</p>
+    <p class="fade-up">If you already have something to sell, you use both halves. You get the audience and the revenue.</p>
+    <p class="fade-up">If you're not selling anything yet or you just want the audience (for ads, sponsorships, brand deals, or a future product), you run the first half only. You still get to 10,000 followers. You just don't plug the funnel in until you're ready to monetize.</p>
+    <p class="fade-up"><strong>Same system. Different depth. Your call.</strong></p>
+  </div>
+</section>
+
+<!-- ============================== SECTION: PRICE ============================== -->
+<section class="price-block">
+  <div class="wrap">
+    <div class="fade-up">
+      <div class="price-label">The price</div>
+      <div class="price-tag">$37</div>
+    </div>
+
+    <div class="cta-wrapper fade-up">
+      <a href="#" class="cta-button" data-cta>Get The Carousel ATM — $37</a>
+      <span class="guarantee-note">7-day money-back guarantee. No questions.</span>
+    </div>
+
+    <div style="text-align: left; max-width: var(--container); margin: 60px auto 0;">
+      <p class="fade-up">I'll be straight with you. I could sell this guide for $197, $297, $497. People selling less polished material in this space price that way all the time.</p>
+      <p class="fade-up">I don't. For a few reasons.</p>
+      <p class="fade-up"><strong>One. My main business isn't this guide.</strong> I'm building an English-speaking community and the next level of product. I want as many people as possible to already know the system by the time I launch. $37 is a filter. A price that keeps freeloaders out but isn't a barrier for people who'll actually do the work.</p>
+      <p class="fade-up"><strong>Two. I remember who I was when I would've needed a system like this.</strong> $37 was real money to me. $297 was impossible. I don't want price to be the reason someone doesn't take this and do it.</p>
+      <p class="fade-up"><strong>Three. The math.</strong> Do it yourself. If you sell anything for even $50, one client from this system pays the guide back today. $500, it pays back 13x. $5,000 (consulting, services, premium products), 135x. One client.</p>
+      <p class="fade-up">And that's just the first. The system keeps running after the first. The second. The tenth. The hundredth.</p>
+      <div class="highlight fade-up">
+        This isn't a purchase. It's an investment with an <strong>ROI that mathematically exceeds 1,000%</strong> at any product level.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== SECTION: GUARANTEE ============================== -->
+<section class="section-body">
+  <div class="wrap">
+    <h2 class="fade-up">The guarantee.</h2>
+    <p class="fade-up">7 days. If it doesn't click, you DM me. I refund. No "prove you tried." No "fill out this 20-question form." No questions.</p>
+    <p class="fade-up">I can afford a guarantee like this because I know two things.</p>
+    <p class="fade-up"><strong>One.</strong> The people who actually read the guide and try don't ask for refunds. They DM me with a different message. <em>"Kamil, why didn't I start sooner."</em> I get those every week.</p>
+    <p class="fade-up"><strong>Two.</strong> The few who do ask for refunds usually haven't even opened the guide. They bought, forgot, saw the charge five days later, asked for their money back. That's fine with me. I'd do the same in their position. No point holding onto someone's $37 they need more than I do.</p>
+
+    <div class="highlight fade-up">
+      <strong>Your risk is zero.</strong> Mine — two years of system-building in one document. I think the stakes are fair.
+    </div>
+
+    <div class="inline-cta fade-up">
+      <h4>Ready to go?</h4>
+      <a href="#" class="cta-button" data-cta>Get The Carousel ATM — $37</a>
+      <div class="guarantee-note" style="color: var(--muted); margin-top: 16px;">7-day money-back guarantee. No questions.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== SECTION: NOT FOR EVERYONE ============================== -->
+<section class="section-body not-for-everyone">
+  <div class="wrap">
+    <h2 class="fade-up">This isn't for everyone.</h2>
+    <p class="fade-up">I want to be honest with you before you hit the button.</p>
+
+    <ul class="fade-up">
+      <li class="yes"><strong>This is for you</strong> if you already sell something (services, products, consulting) or you're close to launching.</li>
+      <li class="yes"><strong>This is for you</strong> if you just want an audience. 10K followers, reach, influence, future options. Even without selling now.</li>
+      <li class="yes"><strong>This is for you</strong> if you want a system, not a hack.</li>
+      <li class="no"><strong>This isn't for you</strong> if you're looking for a magic button. It doesn't exist. Nobody sells it. Everyone who says they do is lying.</li>
+      <li class="no"><strong>This isn't for you</strong> if "I'll start Monday" has been your answer for the last six months. This guide won't fix your ability to start. That's a different kind of work, and I don't sell it.</li>
+      <li class="no"><strong>This isn't for you</strong> if you want followers without posting. The system automates <em>almost</em> everything. But something has to get published. If you can't even do that, don't buy it.</li>
+      <li class="no"><strong>This isn't for you</strong> if you think you'll read this and "put it into action later." Knowledge without action is the most expensive thing in the world. Don't buy what you won't use.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================== FINAL ============================== -->
+<section class="final-section">
+  <div class="wrap">
+    <h2 class="fade-up">Final.</h2>
+    <p class="fade-up">Here's what I want you to get.</p>
+    <p class="fade-up">You already went through this system. It worked on you. Without me laying a finger on it. Without me knowing your name. Without me knowing you exist on this planet.</p>
+    <p class="fade-up">A machine that automatically walks a complete stranger from a random Sunday-night scroll on Instagram to reading a 4,000-word article on a Monday morning. That machine is worth more than $37.</p>
+    <p class="fade-up"><strong>It actually works. You're the live proof.</strong></p>
+
+    <div class="command fade-up">
+      Now take it for yourself.<br>
+      Hit the button. Read it tonight.<br>
+      Launch it within the week.
+    </div>
+
+    <p class="fade-up">In 60 days you'll either come back to me with the message <em>"Kamil, why didn't I start sooner."</em> Or you'll be sitting in the same place you are right now. Wednesday, 11 PM. 847 followers.</p>
+    <p class="fade-up"><strong>Your choice.</strong></p>
+
+    <div class="cta-wrapper fade-up" style="margin-top:50px;">
+      <a href="#" class="cta-button" data-cta>Get The Carousel ATM — $37</a>
+      <span class="guarantee-note" style="color:#888;">7-day money-back guarantee. No questions.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== FOOTER ============================== -->
+<footer>
+  <div class="wrap">
+    <p>— Kamil Gazizov</p>
+    <p><em>The Carousel ATM · 2026</em></p>
+  </div>
+</footer>
+
+<div class="bottom-spacer"></div>
+
+<!-- ============================== STICKY CTA BAR ============================== -->
+<div class="sticky-cta" id="stickyCta">
+  <div class="sticky-info">
+    <strong>The Carousel ATM</strong>
+    <div class="sticky-sub">$37 · 7-day guarantee</div>
+  </div>
+  <a href="#" class="cta-button" data-cta>Get It</a>
+</div>
+
+<script>
+// ============ DATE AUTO-REPLACEMENT ============
+(function() {
+  function formatDate(d) {
+    const weekdays = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+    const day = d.getDate();
+    const suffix = (n) => {
+      if (n >= 11 && n <= 13) return 'th';
+      switch (n % 10) {
+        case 1: return 'st';
+        case 2: return 'nd';
+        case 3: return 'rd';
+        default: return 'th';
+      }
+    };
+    return `${weekdays[d.getDay()]}, ${months[d.getMonth()]} ${day}${suffix(day)}`;
+  }
+
+  document.querySelectorAll('[data-date-plus]').forEach(el => {
+    const days = parseInt(el.getAttribute('data-date-plus'), 10);
+    const target = new Date();
+    target.setDate(target.getDate() + days);
+    el.textContent = formatDate(target);
+  });
+})();
+
+// ============ FADE-UP ON SCROLL ============
+(function() {
+  const items = document.querySelectorAll('.fade-up');
+  if (!('IntersectionObserver' in window)) {
+    items.forEach(el => el.classList.add('visible'));
+    return;
+  }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+  items.forEach(el => observer.observe(el));
+})();
+
+// ============ STICKY CTA — APPEARS ONLY AFTER PRODUCT ANCHOR ============
+(function() {
+  const sticky = document.getElementById('stickyCta');
+  const anchor = document.getElementById('product-anchor');
+  if (!sticky || !anchor) return;
+
+  let shown = false;
+
+  // Observe the anchor — once visible, enable sticky
+  if ('IntersectionObserver' in window) {
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !shown) {
+          shown = true;
+          sticky.classList.add('visible');
+        }
+      });
+    }, { threshold: 0 });
+    obs.observe(anchor);
+  } else {
+    // Fallback — scroll-based
+    window.addEventListener('scroll', () => {
+      if (shown) return;
+      const rect = anchor.getBoundingClientRect();
+      if (rect.top < window.innerHeight) {
+        shown = true;
+        sticky.classList.add('visible');
+      }
+    });
+  }
+
+  // Hide sticky near the very bottom (footer) so it doesn't overlap the final CTA forever
+  window.addEventListener('scroll', () => {
+    if (!shown) return;
+    const bottom = document.body.scrollHeight - window.scrollY - window.innerHeight;
+    if (bottom < 200) {
+      sticky.classList.remove('visible');
+    } else if (shown) {
+      sticky.classList.add('visible');
+    }
+  }, { passive: true });
+})();
+
+// ============ CTA BUTTONS — HOOK UP CHECKOUT HERE ============
+(function() {
+  document.querySelectorAll('[data-cta]').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      // Replace "#" with the actual checkout URL once provided
+      // e.g. btn.setAttribute('href', 'https://your-stripe-checkout-url');
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
