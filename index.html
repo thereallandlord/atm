@@ -1081,7 +1081,7 @@ footer em { color: #999; }
     </div>
 
     <div class="cta-wrapper fade-up">
-      <a href="#" class="cta-button" data-cta>Get The Carousel ATM — $37</a>
+      <a href="https://app.lava.top/products/92e3287e-040b-4564-9189-43eb78905120" target="_blank" rel="noopener" class="cta-button" data-cta>Get The Carousel ATM — $37</a>
       <span class="guarantee-note">7-day money-back guarantee. No questions.</span>
     </div>
 
@@ -1114,7 +1114,7 @@ footer em { color: #999; }
 
     <div class="inline-cta fade-up">
       <h4>Ready to go?</h4>
-      <a href="#" class="cta-button" data-cta>Get The Carousel ATM — $37</a>
+      <a href="https://app.lava.top/products/92e3287e-040b-4564-9189-43eb78905120" target="_blank" rel="noopener" class="cta-button" data-cta>Get The Carousel ATM — $37</a>
       <div class="guarantee-note" style="color: var(--muted); margin-top: 16px;">7-day money-back guarantee. No questions.</div>
     </div>
   </div>
@@ -1157,7 +1157,7 @@ footer em { color: #999; }
     <p class="fade-up"><strong>Your choice.</strong></p>
 
     <div class="cta-wrapper fade-up" style="margin-top:50px;">
-      <a href="#" class="cta-button" data-cta>Get The Carousel ATM — $37</a>
+      <a href="https://app.lava.top/products/92e3287e-040b-4564-9189-43eb78905120" target="_blank" rel="noopener" class="cta-button" data-cta>Get The Carousel ATM — $37</a>
       <span class="guarantee-note" style="color:#888;">7-day money-back guarantee. No questions.</span>
     </div>
   </div>
@@ -1179,7 +1179,7 @@ footer em { color: #999; }
     <strong>The Carousel ATM</strong>
     <div class="sticky-sub">$37 · 7-day guarantee</div>
   </div>
-  <a href="#" class="cta-button" data-cta>Get It</a>
+  <a href="https://app.lava.top/products/92e3287e-040b-4564-9189-43eb78905120" target="_blank" rel="noopener" class="cta-button" data-cta>Get It</a>
 </div>
 
 <script>
@@ -1227,47 +1227,31 @@ footer em { color: #999; }
   items.forEach(el => observer.observe(el));
 })();
 
-// ============ STICKY CTA — APPEARS ONLY AFTER PRODUCT ANCHOR ============
+// ============ STICKY CTA — APPEARS AFTER PRODUCT ANCHOR, HIDES WHEN SCROLLED BACK ABOVE ============
 (function() {
   const sticky = document.getElementById('stickyCta');
   const anchor = document.getElementById('product-anchor');
   if (!sticky || !anchor) return;
 
-  let shown = false;
+  function updateStickyVisibility() {
+    const anchorRect = anchor.getBoundingClientRect();
+    const anchorPassed = anchorRect.top <= 0; // user has scrolled past the product anchor
 
-  // Observe the anchor — once visible, enable sticky
-  if ('IntersectionObserver' in window) {
-    const obs = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting && !shown) {
-          shown = true;
-          sticky.classList.add('visible');
-        }
-      });
-    }, { threshold: 0 });
-    obs.observe(anchor);
-  } else {
-    // Fallback — scroll-based
-    window.addEventListener('scroll', () => {
-      if (shown) return;
-      const rect = anchor.getBoundingClientRect();
-      if (rect.top < window.innerHeight) {
-        shown = true;
-        sticky.classList.add('visible');
-      }
-    });
+    const distanceFromBottom = document.body.scrollHeight - window.scrollY - window.innerHeight;
+    const nearFooter = distanceFromBottom < 200;
+
+    if (anchorPassed && !nearFooter) {
+      sticky.classList.add('visible');
+    } else {
+      sticky.classList.remove('visible');
+    }
   }
 
-  // Hide sticky near the very bottom (footer) so it doesn't overlap the final CTA forever
-  window.addEventListener('scroll', () => {
-    if (!shown) return;
-    const bottom = document.body.scrollHeight - window.scrollY - window.innerHeight;
-    if (bottom < 200) {
-      sticky.classList.remove('visible');
-    } else if (shown) {
-      sticky.classList.add('visible');
-    }
-  }, { passive: true });
+  // Run on every scroll (passive for performance)
+  window.addEventListener('scroll', updateStickyVisibility, { passive: true });
+  window.addEventListener('resize', updateStickyVisibility, { passive: true });
+  // Initial check on page load
+  updateStickyVisibility();
 })();
 
 // ============ CTA BUTTONS — HOOK UP CHECKOUT HERE ============
